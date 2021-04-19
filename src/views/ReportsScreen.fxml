@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="649.0" maxWidth="1083.0" minWidth="1024.0" prefHeight="640.0" prefWidth="1076.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="backButton" layoutX="23.0" layoutY="35.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="100.0" text="BACK" textAlignment="CENTER" />
+      <Label fx:id="heading" layoutX="296.0" layoutY="15.0" style="-fx-font-weight: bold;" text="DB Scheduling System" textAlignment="CENTER">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="headTitle" layoutX="485.0" layoutY="61.0" text="Reports">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="10.0" layoutY="109.0" prefHeight="516.0" prefWidth="1063.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="ScheduleTab" text="Contact">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="1008.0">
+                     <children>
+                        <ComboBox fx:id="contactBoxIn" layoutX="843.0" layoutY="443.0" onAction="#toggleContact" prefHeight="25.0" prefWidth="206.0" promptText="Select Contact" />
+                         <TableView fx:id="appointmentsTableView" layoutX="26.0" layoutY="6.0" prefHeight="434.0" prefWidth="1063.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                             <columns>
+                                 <TableColumn fx:id="aidTableColumn" prefWidth="53.0" text="ID">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="aid" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="titleTableColumn" prefWidth="226.0" text="Title">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="title" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="descriptionTableColumn" prefWidth="183.0" text="Description">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="description" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="typeTableColumn" prefWidth="108.0" text="Type">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="type" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="startTableColumn" prefWidth="152.0" text="Start">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="lstrt" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="endTableColumn" prefWidth="153.0" text="End">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="lend" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                                 <TableColumn fx:id="cuidTableColumn" minWidth="0.0" prefWidth="124.0" text="Customer Id">
+                                     <cellValueFactory>
+                                         <PropertyValueFactory property="cuid" />
+                                     </cellValueFactory>
+                                 </TableColumn>
+                             </columns>
+                             <items>
+                             </items>
+                         </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="typeAndMonthTab" text="Type and Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="typeTableView" prefHeight="232.0" prefWidth="1063.0">
+                           <columns>
+                               <TableColumn fx:id="rTypeTotalTableColumn" prefWidth="71.0" text="Total" />
+                               <TableColumn fx:id="rTypeTableColumn" prefWidth="487.0" text="Type" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="monthTableView" layoutY="232.0" prefHeight="255.0" prefWidth="1063.0">
+                          <columns>
+                            <TableColumn fx:id="rTypeTotal2TableColumn" prefWidth="75.0" text="Total" />
+                            <TableColumn fx:id="rMonthTableColumn" prefWidth="693.0" text="Month" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="LocationTab" text="Location">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="949.0">
+                        <children>
+                            <TableView fx:id="locationTableView" prefHeight="483.0" prefWidth="1063.0">
+                                <columns>
+                                    <TableColumn fx:id="rTypeLocationTableColumn" minWidth="0.0" prefWidth="71.0" text="Total" />
+                                    <TableColumn fx:id="rLocationTableColumn" prefWidth="490.0" text="Location" />
+                                </columns>
+                            </TableView>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
