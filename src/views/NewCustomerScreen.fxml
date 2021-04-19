@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="1024.0" minWidth="632.0" prefHeight="433.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="heading" layoutX="100.0" layoutY="14.0" style="-fx-font-weight: bold;" text="DB Scheduling System" textAlignment="CENTER">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="headTitle" layoutX="230.0" layoutY="55.0" text="Customer Add">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="16.0" layoutY="85.0">
+         <children>
+            <VBox prefHeight="47.0" prefWidth="339.0">
+               <children>
+                  <Label fx:id="cuidLabel" prefHeight="40" prefWidth="150" style="visibility: hidden;" text="ID" />
+                  <TextField fx:id="cuidTextField" disable="true" prefHeight="40" prefWidth="150" style="visibility: hidden;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="47.0" prefWidth="339.0">
+               <children>
+                  <Label fx:id="customerNameLabel" text="Full Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" prefHeight="26.0" prefWidth="391.0" promptText="John Smith">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="56.0" prefWidth="339.0">
+               <children>
+                  <Label fx:id="addressLabel" text="Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addressTextField" promptText="555 WGU ave" />
+               </children>
+            </VBox>
+            <VBox prefHeight="56.0" prefWidth="339.0">
+               <children>
+                  <Label fx:id="zipLabel" text="Postal Code">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="zipTextField" promptText="12345">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="47.0" prefWidth="339.0">
+               <children>
+                  <Label fx:id="phoneLabel" text="Phone">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneTextField" promptText="(000)000-0000" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="377.0" layoutY="131.0" prefHeight="99.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="countryLabel" text="Country">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="countryComboBox" onAction="#setComboBoxes" prefHeight="27.0" prefWidth="220.0" promptText="Choose Country" />
+         </children>
+      </VBox>
+      <VBox layoutX="377.0" layoutY="194.0" prefHeight="99.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="divisionBoxLabel" text="State / Region">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="divisionComboBox" prefHeight="27.0" prefWidth="220.0" promptText="Choose State / Region" />
+         </children>
+      </VBox>
+    <Button fx:id="saveCustomerButton" layoutX="568.0" layoutY="396.0" mnemonicParsing="false" onAction="#save" text="Save" textAlignment="CENTER" />
+      <Button fx:id="cancelCustomerButton" layoutX="460.0" layoutY="396.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="100.0" text="CANCEL" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
