@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="1024.0" minWidth="702.0" prefHeight="489.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="50.0" layoutY="120.0" prefHeight="299.0" prefWidth="381.0">
+         <children>
+            <VBox prefHeight="47.0" prefWidth="381.0">
+               <children>
+                  <Label fx:id="cuidLabel" prefHeight="40" prefWidth="150" style="visibility: hidden;" text="ID" />
+                  <TextField fx:id="cuidTextField" disable="true" prefHeight="40" prefWidth="150" style="visibility: hidden;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="64.0" prefWidth="381.0">
+               <children>
+                  <Label fx:id="nameLabel" text="Full Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" prefHeight="26.0" prefWidth="362.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="80.0" prefWidth="381.0">
+               <children>
+                  <Label fx:id="addressLabel" text="Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addressTextField" />
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="381.0">
+               <children>
+                  <Label fx:id="zipLabel" text="Postal Code">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="zipTextField" promptText="12345">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="80.0" prefWidth="381.0">
+               <children>
+                  <Label fx:id="phoneLabel" text="Phone">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneTextField" promptText="(000)000-0000" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="468.0" layoutY="166.0" prefHeight="80.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="countryLabel" text="Country">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="countryComboBox" onAction="#update" prefHeight="27.0" prefWidth="220.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="468.0" layoutY="230.0" prefHeight="80.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="divisionLabel" text="Division">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="divisionComboBox" prefHeight="27.0" prefWidth="220.0" />
+         </children>
+      </VBox>
+    <Button fx:id="saveButton" layoutX="617.0" layoutY="449.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="72.0" text="Save" />
+      <Button fx:id="cancelButton" layoutX="502.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="100.0" style="r: B39;" text="CANCEL" />
+      <Label fx:id="heading" layoutX="135.0" layoutY="14.0" style="-fx-font-weight: bold;" text="DB Scheduling System" textAlignment="CENTER">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label  fx:id="banner" layoutX="245.0" layoutY="61.0" text="Customer Update">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
